@@ -1,0 +1,120 @@
+{
+  "rows": {
+    "0": {
+      "alpha": 0.0,
+      "nll_nats": 1166981.9810370516,
+      "window_count": 1472,
+      "bpb": 1.4665408110307105,
+      "delta_bpb_vs_alpha0": 0.0,
+      "token_ppl": 22.169975679981967,
+      "targets": 376599,
+      "utf8_bytes": 1148007
+    },
+    "0.005": {
+      "alpha": 0.005,
+      "nll_nats": 1166085.8456977198,
+      "window_count": 1472,
+      "bpb": 1.4654146419306795,
+      "delta_bpb_vs_alpha0": -0.0011261691000310585,
+      "token_ppl": 22.117283878296753,
+      "targets": 376599,
+      "utf8_bytes": 1148007
+    },
+    "0.01": {
+      "alpha": 0.01,
+      "nll_nats": 1165756.353243912,
+      "window_count": 1472,
+      "bpb": 1.4650005703012217,
+      "delta_bpb_vs_alpha0": -0.0015402407294886759,
+      "token_ppl": 22.09794157759787,
+      "targets": 376599,
+      "utf8_bytes": 1148007
+    },
+    "0.02": {
+      "alpha": 0.02,
+      "nll_nats": 1165594.6781018646,
+      "window_count": 1472,
+      "bpb": 1.4647973939045038,
+      "delta_bpb_vs_alpha0": -0.0017434171262065451,
+      "token_ppl": 22.08845689742042,
+      "targets": 376599,
+      "utf8_bytes": 1148007
+    },
+    "0.05": {
+      "alpha": 0.05,
+      "nll_nats": 1166815.9152911175,
+      "window_count": 1472,
+      "bpb": 1.4663321169825725,
+      "delta_bpb_vs_alpha0": -0.00020869404813796285,
+      "token_ppl": 22.16020172431725,
+      "targets": 376599,
+      "utf8_bytes": 1148007
+    }
+  },
+  "probe_seconds": 41.31681609999987,
+  "note": "probe_seconds includes every alpha candidate; measure final inference separately. Building the table costs train tokens, so this is not a zero-cost weight-only postprocessing step.",
+  "protocol": "7506-mp1-wt2-v2",
+  "split": "validation",
+  "device": "cpu",
+  "precision": "fp32",
+  "threads": 4,
+  "checkpoint": {
+    "path": "code\\runs\\posthoc-20260928\\swa\\L40hi-k33\\checkpoint.pt",
+    "sha256": "3672f867f5c2c46e20adbdbe0dc4b89e5a9f4ccf6f9fa02df6fff2d33c0cadec",
+    "implementation": "research_models",
+    "implementation_sha256": "a6d8dac23196474fe609fef8d9f41891d2d1689404924e6a75a77792803125dd",
+    "config": {
+      "vocab": 2048,
+      "width": 256,
+      "heads": 8,
+      "depth": 6,
+      "context": 256,
+      "ffn": "swiglu",
+      "ffn_hidden": 688,
+      "pos": "rope",
+      "dropout": 0.3
+    },
+    "train_tokens": 327680000
+  },
+  "alphas": [
+    0.0,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "bigram": {
+    "beta": 32.0,
+    "vocab": 2048,
+    "unigram_pseudocount": 1.0,
+    "train_tokens": 3613343,
+    "table_shape": [
+      2048,
+      2048
+    ],
+    "table_bytes": 16777216,
+    "build_seconds": 0.047263200000088545,
+    "observed_pairs": 298024,
+    "min_probability": 7.775672467014161e-11,
+    "max_probability": 0.9986690878868103,
+    "tokenize_seconds": 9.771919799999978,
+    "train_utf8_bytes": 10951562,
+    "train_sha256": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8"
+  },
+  "requested_temperature": 1.19,
+  "best_alpha": 0.02,
+  "alpha0_matches_temperature_probe_bpb": 1.4665409118386739,
+  "untempered_evaluate_baseline_bpb": 1.4922101821906426,
+  "evaluate_baseline": {
+    "bpb": 1.4922101821906426,
+    "nll_nats": 1187408.0703643167,
+    "targets": 376599,
+    "utf8_bytes": 1148007,
+    "seconds": 41.66262310000002
+  },
+  "probe_sha256": "3b0ad108891f0e6784a52c169a0a99df2486b7d910a6d2940a2b95b6be8c76e9",
+  "evaluator_sha256": "128bcb2dab0be0d427505bddb4671e3ab3a8f78e114be79a689c0f9029af133d",
+  "common_sha256": "d40dc1fe6578b5993a563bdb4d9e5317ddc9fae8afe48822b66571c7042e84db",
+  "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e",
+  "validation_sha256": "714a24a5de7459876f7cfdc64837e551dd7cde2a51f95b763ee083fff273e307"
+}

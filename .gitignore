@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+/code/
+/.claude/
+/bundle/*.pt
+/bundle/*.zip
+/tmp/
+/output/
+/docs/REPORT_PLAN.md
+/docs/RELEASE_PLAN.md
+**/.venv/
+**/__pycache__/
+**/*.pyc

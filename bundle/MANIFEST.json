@@ -1,0 +1,14 @@
+{
+  "protocol": "7506-mp1-wt2-v2",
+  "checkpoint_file": "checkpoint.pt",
+  "checkpoint_sha256": "2145fdb0acf4e07c678335fd6f8a88edb39ede72dbe5039c804a85a7e0ea4169",
+  "checkpoint_bytes": 40067992,
+  "implementation": "bigram_models",
+  "parameters": 5290048,
+  "temperature": 1.19,
+  "bigram_alpha": 0.02,
+  "validation_cpu_fp32_bpb": 1.4647973939045038,
+  "test_cpu_fp32_bpb": 1.4850591241750035,
+  "inference_asset_bytes": 40203767,
+  "source_release": "submission/"
+}

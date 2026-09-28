@@ -1,0 +1,197 @@
+{
+  "purpose": "Frozen final predictor: temperature 1.19 plus train-only bigram mix at alpha 0.02 on checkpoint.pt in L40hi-k33.",
+  "split": "validation",
+  "base_checkpoint": "code\\runs\\posthoc-20260928\\swa\\L40hi-k33\\checkpoint.pt",
+  "base_sha256": "3672f867f5c2c46e20adbdbe0dc4b89e5a9f4ccf6f9fa02df6fff2d33c0cadec",
+  "base_bytes": 23289371,
+  "frozen_checkpoint": "code\\runs\\posthoc-20260928\\final\\checkpoint.pt",
+  "frozen_sha256": "2145fdb0acf4e07c678335fd6f8a88edb39ede72dbe5039c804a85a7e0ea4169",
+  "frozen_bytes": 40067992,
+  "inference_asset_bytes": 40203767,
+  "temperature": 1.19,
+  "config": {
+    "vocab": 2048,
+    "width": 256,
+    "heads": 8,
+    "depth": 6,
+    "context": 256,
+    "ffn": "swiglu",
+    "ffn_hidden": 688,
+    "pos": "rope",
+    "dropout": 0.3,
+    "temperature": 1.19,
+    "bigram_alpha": 0.02
+  },
+  "freeze": {
+    "method": "student_weights_plus_train_only_bigram",
+    "weights_recomputed": false,
+    "student_weights_recomputed": false,
+    "source": "code\\runs\\posthoc-20260928\\swa\\L40hi-k33\\checkpoint.pt",
+    "source_sha256": "3672f867f5c2c46e20adbdbe0dc4b89e5a9f4ccf6f9fa02df6fff2d33c0cadec",
+    "temperature": 1.19,
+    "bigram_alpha": 0.02,
+    "protocol": "7506-mp1-wt2-v2",
+    "bigram": {
+      "beta": 32.0,
+      "vocab": 2048,
+      "unigram_pseudocount": 1.0,
+      "train_tokens": 3613343,
+      "table_shape": [
+        2048,
+        2048
+      ],
+      "table_bytes": 16777216,
+      "build_seconds": 0.04055000000016662,
+      "observed_pairs": 298024,
+      "min_probability": 7.775672467014161e-11,
+      "max_probability": 0.9986690878868103,
+      "alpha": 0.02,
+      "train_sha256": "c58d555a94ada0882d1e8c0b3dc7ba68e1c269da5ad9e7a057300245d130c4e8",
+      "train_utf8_bytes": 10951562,
+      "tokenizer_sha256": "020d1bc6aa4449c4f352b2e03d0e0fb4f39287f15297705e421b1fa7d817262e"
+    }
+  },
+  "e0_baseline_checkpoint": "code\\runs\\round1-extension-4000-20260926\\E0-s17\\checkpoint.pt",
+  "official_bpb": 1.4647973939045038,
+  "official_targets": 376599,
+  "cpu_scoring": [
+    {
+      "target": "E0-anchor",
+      "rep": 1,
+      "official": true,
+      "bpb": 1.7793456840487019,
+      "seconds": 11.618555900000047,
+      "targets": 376599,
+      "cpu_command_seconds": 25.452179800000067,
+      "cpu_peak_working_set_bytes": 1938915328,
+      "output": "runs\\posthoc-20260928\\final\\E0-anchor\\validation_cpu_fp32.json"
+    },
+    {
+      "target": "frozen-T1.19",
+      "rep": 1,
+      "official": true,
+      "bpb": 1.4647973939045038,
+      "seconds": 45.1510202999998,
+      "targets": 376599,
+      "cpu_command_seconds": 58.94418440000027,
+      "cpu_peak_working_set_bytes": 2008600576,
+      "output": "runs\\posthoc-20260928\\final\\frozen-T1.19\\validation_cpu_fp32.json"
+    },
+    {
+      "target": "E0-anchor",
+      "rep": 2,
+      "official": false,
+      "bpb": 1.7793456840487019,
+      "seconds": 11.505574299999807,
+      "targets": 376599,
+      "cpu_command_seconds": 25.28654430000006,
+      "cpu_peak_working_set_bytes": 1940570112,
+      "output": "runs\\posthoc-20260928\\final\\cpu-scoring\\E0-anchor-rep2.json"
+    },
+    {
+      "target": "frozen-T1.19",
+      "rep": 2,
+      "official": false,
+      "bpb": 1.4647973939045038,
+      "seconds": 44.8155956999999,
+      "targets": 376599,
+      "cpu_command_seconds": 58.74134830000003,
+      "cpu_peak_working_set_bytes": 2008535040,
+      "output": "runs\\posthoc-20260928\\final\\cpu-scoring\\frozen-T1.19-rep2.json"
+    },
+    {
+      "target": "E0-anchor",
+      "rep": 3,
+      "official": false,
+      "bpb": 1.7793456840487019,
+      "seconds": 11.546239799999967,
+      "targets": 376599,
+      "cpu_command_seconds": 25.067874299999858,
+      "cpu_peak_working_set_bytes": 1941032960,
+      "output": "runs\\posthoc-20260928\\final\\cpu-scoring\\E0-anchor-rep3.json"
+    },
+    {
+      "target": "frozen-T1.19",
+      "rep": 3,
+      "official": false,
+      "bpb": 1.4647973939045038,
+      "seconds": 44.80078019999928,
+      "targets": 376599,
+      "cpu_command_seconds": 58.84585680000009,
+      "cpu_peak_working_set_bytes": 1693007872,
+      "output": "runs\\posthoc-20260928\\final\\cpu-scoring\\frozen-T1.19-rep3.json"
+    }
+  ],
+  "paired_seconds_ratio": {
+    "by_rep": [
+      3.886112929060282,
+      3.8951202722666918,
+      3.880118633946907
+    ],
+    "median": 3.886112929060282,
+    "min_seconds_ratio": 3.8938325920853885
+  },
+  "peak_working_set_bytes": 2008600576,
+  "round_seconds": 270.6503534999997,
+  "audit": {
+    "checks": [
+      {
+        "name": "frozen_student_weights_identical_to_base",
+        "ok": true,
+        "detail": {
+          "entries": 88,
+          "extra_keys": [
+            "bigram_table"
+          ]
+        }
+      },
+      {
+        "name": "frozen_config_adds_only_declared_keys",
+        "ok": true,
+        "detail": {
+          "added": [
+            "bigram_alpha",
+            "temperature"
+          ]
+        }
+      },
+      {
+        "name": "frozen_bpb_deterministic_across_reps",
+        "ok": true,
+        "detail": null
+      },
+      {
+        "name": "cpu_time_within_5x_by_paired_median",
+        "ok": true,
+        "detail": {
+          "paired_by_rep": [
+            3.886112929060282,
+            3.8951202722666918,
+            3.880118633946907
+          ],
+          "paired_median": 3.886112929060282
+        }
+      },
+      {
+        "name": "ram_within_4gib",
+        "ok": true,
+        "detail": 2008600576
+      },
+      {
+        "name": "asset_within_64mib",
+        "ok": true,
+        "detail": {
+          "inference_asset_bytes": 40203767,
+          "checkpoint_bytes": 40067992,
+          "inference_sources": [
+            "bigram_models.py",
+            "model.py",
+            "research_models.py",
+            "student.py"
+          ]
+        }
+      }
+    ],
+    "failed": []
+  }
+}

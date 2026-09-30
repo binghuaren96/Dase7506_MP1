@@ -1,4 +1,6 @@
-# DASE7506 MP1 — frozen small language model
+# DASE7506 MP1 — Small Language Model Challenge
+
+Student ID:3036781636  Name:Ren Binghua
 
 The frozen method is a 5.29M-parameter RoPE/SwiGLU student trained from random initialization on the supplied WikiText-2 train text. The frozen predictor averages 33 checkpoints from steps 24,000–40,000, applies temperature 1.19, and mixes in a train-only smoothed bigram table with weight 0.02. Development and model selection used validation; the full-test split was scored only after the predictor was frozen.
 

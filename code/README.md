@@ -122,9 +122,8 @@ can change; use the distributed frozen checkpoint for score verification.
 The final choice of width, dropout, learning rate, averaging window,
 temperature and mixture weight came from validation searches. Only seed 17
 was tested for this final recipe, so the small validation improvements carry
-selection and seed uncertainty. The full project report and experiment ledger
-in the parent repository disclose controls, ablations, earlier arms and total
-search cost.
+selection and seed uncertainty. The report in `../doc/FINAL_REPORT.pdf`
+discloses controls, ablations, earlier arms and total search cost.
 
 ## Files, provenance and attribution
 
@@ -132,11 +131,9 @@ search cost.
 `configs/baseline.json` are copied byte-for-byte from the working course
 project. `student.py`, `research_models.py`, `bigram_models.py`, the training,
 averaging and freezing scripts, and focused tests contain the student work.
-`MANIFEST.json` lists each included source file's SHA-256 and the matching
-source path. The checkpoint is distributed separately and is intentionally
-absent from this code directory. Local experiment outputs under `runs/` are
-not part of this compact release; the parent working tree retains the full
-logs, checkpoints and evidence.
+The checkpoint is distributed separately and is intentionally absent from this
+code directory. Local experiment outputs under `runs/` are not needed to score
+the frozen predictor.
 
 WikiText-2 was introduced by Stephen Merity, Caiming Xiong, James Bradbury
 and Richard Socher in *Pointer Sentinel Mixture Models*. The text comes from

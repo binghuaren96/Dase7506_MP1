@@ -1,5 +1,2 @@
-# The course data, tokenizer, evaluator and copied model sources are byte-checked.
-# Never rewrite their line endings when Git checks out the submission tree.
-submission/** -text
-evidence/** -text
-bundle/** -text
+# Preserve the exact bytes of supplied data, tokenizer, and evaluator.
+code/** -text

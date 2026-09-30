@@ -1,13 +1,11 @@
 .DS_Store
 Thumbs.db
-/code/
 /.claude/
-/bundle/*.pt
-/bundle/*.zip
 /tmp/
 /output/
-/docs/REPORT_PLAN.md
-/docs/RELEASE_PLAN.md
+code/runs/
 **/.venv/
 **/__pycache__/
 **/*.pyc
+*.pt
+*.zip

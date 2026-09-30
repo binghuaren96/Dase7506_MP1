@@ -17,9 +17,10 @@ The final predictor is a 5.29M-parameter RoPE/SwiGLU language model trained from
 ## Submission files
 
 - [`code/`](code/) contains the unchanged course evaluator, fixed data and tokenizer, model code, tests, and exact installation, training, and scoring instructions in [`code/README.md`](code/README.md).
-- [`doc/FINAL_REPORT.pdf`](doc/FINAL_REPORT.pdf) is the technical report. It includes the baseline, equal-target comparison, ablation, search cost, and limitations.
+- [`doc/FINAL_REPORT.pdf`](doc/FINAL_REPORT.pdf) is the technical report; [`doc/FINAL_REPORT.md`](doc/FINAL_REPORT.md) is its readable source. The report includes the baseline, equal-target comparison, ablation, search cost, and limitations.
+- [`doc/release-test.json`](doc/release-test.json) and [`doc/release-validation.json`](doc/release-validation.json) record independent CPU FP32 scoring from the compact release.
 
-The matching checkpoint is distributed separately from this code repository. Its SHA-256 is `2145fdb0acf4e07c678335fd6f8a88edb39ede72dbe5039c804a85a7e0ea4169` (40,067,992 bytes). Download it from the checkpoint link in the course submission, verify its hash, then run from `code/`:
+The matching [checkpoint.pt](https://github.com/binghuaren96/Dase7506_MP1/releases/download/MP1-Final-V1/checkpoint.pt) is distributed as a release asset, separately from the code tree. Its SHA-256 is `2145fdb0acf4e07c678335fd6f8a88edb39ede72dbe5039c804a85a7e0ea4169` (40,067,992 bytes). Download it, verify its hash, then run from `code/`:
 
 ```bash
 python evaluate.py --checkpoint /path/to/checkpoint.pt --device cpu --precision fp32 --threads 4 --split test
